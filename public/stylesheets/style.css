@@ -1,0 +1,300 @@
+table.greyGridTable {
+  border: 2px solid #FFFFFF;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.greyGridTable td, table.greyGridTable th {
+  border: 1px solid #FFFFFF;
+  padding: 3px 4px;
+}
+table.greyGridTable tbody td {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+table.greyGridTable td:nth-child(even) {
+  background: #EBEBEB;
+}
+table.greyGridTable thead {
+  background: #FFFFFF;
+  border-bottom: 4px solid #333333;
+}
+table.greyGridTable thead th {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  border-left: 2px solid #333333;
+}
+table.greyGridTable thead th:first-child {
+  border-left: none;
+}
+
+table.greyGridTable tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  border-top: 4px solid #333333;
+}
+table.greyGridTable tfoot td {
+  font-size: 14px;
+}
+a {
+  display: block;
+  margin: auto;
+  padding: 1rem 1.25rem;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: rgb(34, 2, 177);
+  position: relative;
+  transition: all .3s cubic-bezier(.2, 0, 0, 1);
+  z-index: 1;
+  
+  &:after {
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 1.25rem;
+    left: 1.25rem;
+    background-color: #ffffff;
+    transition: all .3s cubic-bezier(.2, 0, 0, 1);
+    transform-origin: bottom center;
+    z-index: -1;
+  }
+  
+  &:hover {
+    color: #2D2D2D;
+    
+    &:after {
+      right: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+}
+
+.basic-grey {
+  margin-left:auto;
+  margin-right:auto;
+  max-width: 500px;
+  background: #F7F7F7;
+  padding: 25px 15px 25px 10px;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  color: #888;
+  text-shadow: 1px 1px 1px #FFF;
+  border:1px solid #E4E4E4;
+}
+.basic-grey h1 {
+  font-size: 25px;
+  padding: 0px 0px 10px 40px;
+  display: block;
+  border-bottom:1px solid #E4E4E4;
+  margin: -10px -15px 30px -10px;;
+  color: #888;
+}
+.basic-grey h1>span {
+  display: block;
+  font-size: 11px;
+}
+.basic-grey label {
+  display: block;
+  margin: 0px;
+}
+.basic-grey label>span {
+  float: left;
+  width: 20%;
+  text-align: right;
+  padding-right: 10px;
+  margin-top: 10px;
+  color: #888;
+}
+.basic-grey input[type="text"], .basic-grey input[type="email"], .basic-grey textarea, .basic-grey select {
+  border: 1px solid #DADADA;
+  color: #888;
+  height: 30px;
+  margin-bottom: 16px;
+  margin-right: 6px;
+  margin-top: 2px;
+  outline: 0 none;
+  padding: 3px 3px 3px 5px;
+  width: 70%;
+  font-size: 12px;
+  line-height:15px;
+  box-shadow: inset 0px 1px 4px #ECECEC;
+  -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+  -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+.basic-grey textarea{
+  padding: 5px 3px 3px 5px;
+}
+.basic-grey select {
+  background: #FFF url('down-arrow.png') no-repeat right;
+  background: #FFF url('down-arrow.png') no-repeat right);
+  appearance:none;
+  -webkit-appearance:none; 
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  width: 70%;
+  height: 35px;
+  line-height: 25px;
+}
+.basic-grey textarea{
+  height:100px;
+}
+.basic-grey .button {
+  background: rgb(34, 2, 177);
+  border: none;
+  padding: 10px 25px 10px 25px;
+  color: #FFF;
+  box-shadow: 1px 1px 5px #B6B6B6;
+  border-radius: 3px;
+  text-shadow: 1px 1px 1px #9E3F3F;
+  cursor: pointer;
+}
+.basic-grey .button:hover {
+  background: rgb(34, 2, 177);
+}
+
+.search {
+  width: 50%;
+  position: relative
+}
+
+.searchTerm {
+  float: right;
+  width: 50%;
+  border: 3px solid rgb(34, 2, 177);
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: rgb(34, 2, 177);
+}
+
+.searchButton {
+  position: absolute;  
+  right: -50px;
+  width: 20%;
+  height: 36px;
+  border: 1px solid rgb(34, 2, 177);
+  background: rgb(34, 2, 177);
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: rgb(34, 2, 177);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: rgb(34, 2, 177);
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: rgb(34, 2, 177);
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+body {
+  background: #76b852; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, rgb(34, 2, 177), rgb(34, 2, 177));
+  background: -moz-linear-gradient(right, rgb(34, 2, 177), rgb(34, 2, 177));
+  background: -o-linear-gradient(right, rgb(34, 2, 177), rgb(34, 2, 177));
+  background: linear-gradient(to left, rgb(34, 2, 177), rgb(34, 2, 177));
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+.titulo {
+  color: #FFFFFF;
+}

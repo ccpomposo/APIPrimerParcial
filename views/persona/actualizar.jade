@@ -1,0 +1,19 @@
+extends ../layout 
+block content
+    h1.
+        #{title}
+    form#formActualizarPersona(class="basic-grey", name="actualizarPersona", method="post", action="/personas/actualizar")
+        p Nombre:
+            input#inputNombre(type="text", placeholder="Ejemplo: César", name="nombre", value="#{persona.nombre}")
+        p Apellido:
+            input#inputApellido(type="text", placeholder="Ejemplo: Cruz", name="apellido", value="#{persona.apellido}")
+        p Teléfono:
+            input#inputTelefono(type="text", placeholder="Ejemplo: 9511234567", name="telefono_", disabled="disabled", value="#{persona.telefono}")
+        p Email:
+            input#inputEmail(type="email", placeholder="Ejemplo: test@test.com", value="#{persona.email}")
+        p Fecha de nacimiento:
+            input#inputFechaNac(type="date", name="fecha_nac", value="#{persona.fecha_nacimiento}")
+        p 
+            input(type="hidden", name="telefono", value="#{persona.telefono}")
+        p
+            button#btnEnviar(class="button",type="submit") Guardar

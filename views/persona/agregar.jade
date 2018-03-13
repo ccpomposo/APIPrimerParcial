@@ -1,0 +1,17 @@
+extends ../layout 
+block content
+    h1.
+        #{title}
+    form#formAgregarPersona(class="basic-grey", name="agregarPersona", method="post", action="/personas")
+        p Nombre:
+            input#inputNombre(type="text", placeholder="Ejemplo: César", name="nombre")
+        p Apellido:
+            input#inputApellido(type="text", placeholder="Ejemplo: Cruz", name="apellido")
+        p Teléfono:
+            input#inputTelefono(type="text", placeholder="Ejemplo: 9511234567", name="telefono")
+        p Email:
+            input#inputEmail(type="email", placeholder="Ejemplo: test@test.com", name="email")
+        p Fecha de nacimiento:
+            input#inputFechaNac(type="date", name="fecha_nac")
+        p
+            button#btnEnviar(class="button",type="submit") Guardar

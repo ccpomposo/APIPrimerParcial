@@ -1,0 +1,31 @@
+extends ../layout 
+block content
+    form#searchBar(class="search", method="POST" action="/personas/buscar")
+        input(type="text", name="nombre", placeholder="Buscar..." class="searchTerm")
+        input(type="submit" value="Buscar" class="searchButton")
+        <br/>
+    h1.
+        #{title}
+    div
+        table(class="greyGridTable")
+            thead
+                tr
+                    td
+                        b Nombre
+                    td
+                        b Teléfono
+            tbody
+                each persona in personas
+                    tr
+                        td 
+                            =persona.nombre
+                        td 
+                            =persona.telefono
+                        td 
+                            a(href='../personas/eliminar?telefono=#{persona.telefono}') Eliminar 
+                        td
+                            a(href='../personas/actualizar?telefono=#{persona.telefono}') Actualizar
+    div
+        p 
+            a(href='personas/agregar') Agregar nuevo -
+                

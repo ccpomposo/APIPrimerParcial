@@ -1,0 +1,14 @@
+extends layout
+block content  
+    h1(class="titulo")
+        #{title}
+    form(method="post", action="/login", class="form")
+        p
+            input(type="text", name="user", placeholder="Usuario")
+        p
+            input(type="password", name="pass", placeholder="Contraseña")
+        p
+            button(type="submit") Iniciar sesión
+        p(class="message")
+            a(href="/registro") Registrarse
+    
